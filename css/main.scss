@@ -175,3 +175,23 @@ nav {
     }
 }
 
+@media (max-width : 600px){
+    ul{
+        width: 50%;
+        padding: 1em;
+        grid-template-columns: repeat(4, 70%);
+    }
+
+    nav a{
+        font-size: 1em;
+        padding: 1eml
+    }
+
+    nav span{
+        font-size: .5em;
+    }
+
+    section{
+        padding: 1em;
+    }
+}

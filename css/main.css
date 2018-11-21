@@ -242,4 +242,23 @@ nav .close-btn {
     opacity: 0;
   }
 }
+
+@media (max-width: 600px) {
+  ul {
+    width: 50%;
+    padding: 1em;
+    -ms-grid-columns: (70%)[4];
+        grid-template-columns: repeat(4, 70%);
+  }
+  nav a {
+    font-size: 1em;
+    padding: 1eml;
+  }
+  nav span {
+    font-size: .5em;
+  }
+  section {
+    padding: 1em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
