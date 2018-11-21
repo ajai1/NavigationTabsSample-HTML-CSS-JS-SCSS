@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    font-family: 'Montserrat';
+    margin: 0;
+    a{
+        text-decoration: none;
+    }
+}
+
+
+header{
+    padding: 2em;
+
+    .logo {
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .menu-btn {
+        float: right;
+        width: 22px;
+        cursor: pointer;
+    }
+}
+
+section {
+    padding: 10em;
+
+    h1{
+        font-size: 4em;
+        margin: auto;
+        text-align: center;
+    }
+
+    &::before {
+        content: ' ';
+        text-align: center;
+        border-top: 5px solid rgb(141, 141, 141);
+        display: block;
+    }
+}
+
+
+nav {
+
+    position: absolute;
+    background: black;
+    padding:2em;
+    width: calc(100% - 4em);
+    height: calc(100% - 4em); 
+    display: none;
+    transform: scaleX(0);
+    transform-origin: right;
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+    ul{
+        list-style-type: none;
+        margin: 10% auto 0 15%;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        width: 80%;
+    }
+
+    span {
+        color: azure;
+        display: block;
+        font-size: .75em;
+        margin-top: 15px;
+    }
+    
+    li{
+        opacity: 0;
+    }
+
+    .close-btn {
+        float: right;
+        width: 22px;
+        cursor: pointer;
+        opacity: 0;
+    }
+}
+
+.show-menu {
+    display: block;
+    animation: slide-menu 1s ease-in forwards;
+    .close-btn {
+        animation: show-x 1s 1s ease-in forwards;
+    }
+    li:nth-of-type(1){
+        animation: list-anim 0.6s forwards 1s ease-in-out;
+    }
+    li:nth-of-type(2){
+        animation: list-anim 0.6s forwards 1.2s ease-in-out;
+    }
+    li:nth-of-type(3){
+        animation: list-anim 0.6s forwards 1.4s ease-in-out;
+    }
+    li:nth-of-type(4){
+        animation: list-anim 0.6s forwards 1.6s ease-in-out;
+    }
+}
+
+@keyframes slide-menu{
+    from{
+        transform: scaleX(0);
+
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show-x{
+    from{
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes list-anim{
+    from{
+        transform: translateY(70%);
+        opacity: 0;
+
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.close-menu {
+    display: block;
+
+    .close-btn {
+        animation: hide-x .5s  ease-in backwards;
+    }
+    li{
+        animation: hide-x .5s ease-in backwards;
+    }
+
+    animation: close-menu 1s backwards .5s ease-in-out;
+
+}
+
+@keyframes close-menu{
+    from{
+        transform: scaleX(1);
+
+    }
+    to{
+        transform: scaleX(0);
+    }
+}
+
+@keyframes hide-x{
+    from{
+        opacity: 1;
+
+    }
+    to{
+        opacity: 0;
+    }
+}
+

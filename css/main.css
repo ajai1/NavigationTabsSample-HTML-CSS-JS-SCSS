@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+body, html {
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+body a, html a {
+  text-decoration: none;
+}
+
+header {
+  padding: 2em;
+}
+
+header .logo {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header .menu-btn {
+  float: right;
+  width: 22px;
+  cursor: pointer;
+}
+
+section {
+  padding: 10em;
+}
+
+section h1 {
+  font-size: 4em;
+  margin: auto;
+  text-align: center;
+}
+
+section::before {
+  content: ' ';
+  text-align: center;
+  border-top: 5px solid #8d8d8d;
+  display: block;
+}
+
+nav {
+  position: absolute;
+  background: black;
+  padding: 2em;
+  width: calc(100% - 4em);
+  height: calc(100% - 4em);
+  display: none;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 10% auto 0 15%;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  width: 80%;
+}
+
+nav span {
+  color: azure;
+  display: block;
+  font-size: .75em;
+  margin-top: 15px;
+}
+
+nav li {
+  opacity: 0;
+}
+
+nav .close-btn {
+  float: right;
+  width: 22px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.show-menu {
+  display: block;
+  -webkit-animation: slide-menu 1s ease-in forwards;
+          animation: slide-menu 1s ease-in forwards;
+}
+
+.show-menu .close-btn {
+  -webkit-animation: show-x 1s 1s ease-in forwards;
+          animation: show-x 1s 1s ease-in forwards;
+}
+
+.show-menu li:nth-of-type(1) {
+  -webkit-animation: list-anim 0.6s forwards 1s ease-in-out;
+          animation: list-anim 0.6s forwards 1s ease-in-out;
+}
+
+.show-menu li:nth-of-type(2) {
+  -webkit-animation: list-anim 0.6s forwards 1.2s ease-in-out;
+          animation: list-anim 0.6s forwards 1.2s ease-in-out;
+}
+
+.show-menu li:nth-of-type(3) {
+  -webkit-animation: list-anim 0.6s forwards 1.4s ease-in-out;
+          animation: list-anim 0.6s forwards 1.4s ease-in-out;
+}
+
+.show-menu li:nth-of-type(4) {
+  -webkit-animation: list-anim 0.6s forwards 1.6s ease-in-out;
+          animation: list-anim 0.6s forwards 1.6s ease-in-out;
+}
+
+@-webkit-keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes list-anim {
+  from {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes list-anim {
+  from {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-menu {
+  display: block;
+  -webkit-animation: close-menu 1s backwards .5s ease-in-out;
+          animation: close-menu 1s backwards .5s ease-in-out;
+}
+
+.close-menu .close-btn {
+  -webkit-animation: hide-x .5s  ease-in backwards;
+          animation: hide-x .5s  ease-in backwards;
+}
+
+.close-menu li {
+  -webkit-animation: hide-x .5s ease-in backwards;
+          animation: hide-x .5s ease-in backwards;
+}
+
+@-webkit-keyframes close-menu {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  to {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@keyframes close-menu {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  to {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@-webkit-keyframes hide-x {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hide-x {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
