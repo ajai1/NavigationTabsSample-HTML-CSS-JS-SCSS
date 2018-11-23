@@ -90,3 +90,13 @@ article:not(:hover){
     box-shadow: 0 2px 10px rgba(27, 31, 35, 0.541);
 }
 
+.go-back{
+    margin: 0;
+    padding: 0px;
+    border-radius: 6%;
+    box-shadow: 0 2px 10px rgba(27, 31, 35, 0.158);
+}
+
+.go-back:hover{
+    box-shadow: 0 2px 10px rgba(27, 31, 35, 0.445);
+}

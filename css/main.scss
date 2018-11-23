@@ -90,21 +90,21 @@ nav {
 
 .show-menu {
     display: block;
-    animation: slide-menu 1s ease-in forwards;
+    animation: slide-menu 0.7s ease-in forwards;
     .close-btn {
-        animation: show-x 1s 1s ease-in forwards;
+        animation: show-x 1s 0.7s ease-in forwards;
     }
     li:nth-of-type(1){
-        animation: list-anim 0.6s forwards 1s ease-in-out;
+        animation: list-anim 0.6s forwards 0.8s ease-in-out;
     }
     li:nth-of-type(2){
-        animation: list-anim 0.6s forwards 1.2s ease-in-out;
+        animation: list-anim 0.6s forwards 1.0s ease-in-out;
     }
     li:nth-of-type(3){
-        animation: list-anim 0.6s forwards 1.4s ease-in-out;
+        animation: list-anim 0.6s forwards 1.2s ease-in-out;
     }
     li:nth-of-type(4){
-        animation: list-anim 0.6s forwards 1.6s ease-in-out;
+        animation: list-anim 0.6s forwards 1.4s ease-in-out;
     }
 }
 
