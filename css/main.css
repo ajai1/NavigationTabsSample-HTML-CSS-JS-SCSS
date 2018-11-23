@@ -256,6 +256,7 @@ nav .close-btn {
   }
   nav span {
     font-size: .5em;
+    padding-right: 2em;
   }
   section {
     padding: 1em;
